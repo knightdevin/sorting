@@ -1,20 +1,15 @@
-
-const funcsObject = {}
-
-
+const funcsObject = {};
 
 let i = 0;
 let counter = 0;
 
-funcsObject.counterIncreaser = function() {
+funcsObject.counterIncreaser = function () {
   counter++; // increment the counter
 };
 
-funcsObject.bubbleSort = function(array) {
+funcsObject.bubbleSort = function (array) {
   /* your code here */
   let isSorted = false;
-
-
 
   while (!isSorted) {
     let elemIndex = i % array.length;
@@ -38,4 +33,4 @@ funcsObject.bubbleSort = function(array) {
     i++; // increment the index by one
   }
   return array;
-}
+};
