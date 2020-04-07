@@ -1,12 +1,20 @@
-function bubbleSort(array) {
+
+const funcsObject = {}
+
+
+
+let i = 0;
+let counter = 0;
+
+funcsObject.counterIncreaser = function() {
+  counter++; // increment the counter
+};
+
+funcsObject.bubbleSort = function(array) {
   /* your code here */
   let isSorted = false;
-  let i = 0;
-  let counter = 0;
 
-  const counterIncreaser = () => {
-    counter++; // increment the counter
-  };
+
 
   while (!isSorted) {
     let elemIndex = i % array.length;
@@ -17,7 +25,7 @@ function bubbleSort(array) {
     if (elem > nextElem && elemIndex < nextElemIndex) {
       array[elemIndex] = nextElem;
       array[nextElemIndex] = elem;
-      counterIncreaser();
+      this.counterIncreaser();
     }
 
     if (i % array.length === 0 && i > 0) {
